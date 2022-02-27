@@ -1,8 +1,10 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body {
   padding: 40px;
   background-color: #efefef;
+  min-height: 100vh;
 }
 .logo {
   max-width: 40vh;
@@ -36,6 +38,10 @@ body {
   width: 200px;
   height: 200px;
 }
+.box.pokemon-card {
+  margin: auto;
+  width: 60%;
+}
 .divider {
   position: relative;
   display: flex;
@@ -55,6 +61,9 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.pokemon-card:hover {
+  cursor: pointer;
 }
 .pokemon-card_header {
   position: relative;
@@ -77,68 +86,72 @@ body {
   width: 100%;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .pokemon-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 15px;
 }
 .pokemon-card_name {
   font-family: "Press Start 2P", cursive;
 }
-.pokemon-description {
-  text-align: left;
+.pokemon-card:hover
+  > .pokemon-card_info
+  > .pokemon-content
+  > .pokemon-card_name {
+  transform: scale(1.2);
 }
-.pokemon-type.Grass {
+.pokemon-type.grass {
   background-color: #00d1b2 !important;
   color: #fff;
 }
-.pokemon-type.Poison {
+.pokemon-type.poison {
   background-color: #a040a0 !important;
   color: #fff;
 }
-.pokemon-type.Bug {
+.pokemon-type.bug {
   background-color: #9cb820 !important;
   color: #fff;
 }
-.pokemon-type.Flying {
+.pokemon-type.flying {
   background-color: #9096f0 !important;
   color: #fff;
 }
-.pokemon-type.Dragon {
+.pokemon-type.dragon {
   background-color: #a040a0 !important;
   color: #fff;
 }
-.pokemon-type.Psychic {
+.pokemon-type.psychic {
   background-color: #7038f8 !important;
   color: #fff;
 }
-.pokemon-type.Electric {
+.pokemon-type.electric {
   background-color: #c09643 !important;
   color: #fff;
 }
-.pokemon-type.Ghost {
+.pokemon-type.ghost {
   background-color: #705898 !important;
   color: #fff;
 }
-.pokemon-type.Ground {
+.pokemon-type.ground {
   background-color: #e0b668 !important;
   color: #fff;
 }
-.pokemon-type.Psychic {
+.pokemon-type.psychic {
   background-color: #eb2d77 !important;
   color: #fff;
 }
-.pokemon-type.Water {
+.pokemon-type.water {
   background-color: #6890f0 !important;
   color: #fff;
 }
-.pokemon-type.Ice {
+.pokemon-type.ice {
   background-color: #98d8d8 !important;
   color: #fff;
 }
-.pokemon-type.Fire {
+.pokemon-type.fire {
   background-color: #f08030 !important;
   color: #fff;
 }

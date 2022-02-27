@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setPokemonData } from "../store/pokemonSlice";
 
 const PokemonList = () => {
   const [list, setList] = useState<any[]>([]);
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const fetchPokemonData = (url: string) => {
     fetch(url)
@@ -24,11 +31,20 @@ const PokemonList = () => {
     fetchPokemonList();
   }, []);
 
+  const showDetails = (pokemon: any) => {
+    dispatch(setPokemonData(pokemon));
+    navigate("/" + pokemon?.id);
+  };
+
   const renderList = () => {
     return list.length > 0 ? (
       <div className="columns is-multiline is-centered">
         {list.map((pokemon, index) => (
-          <div className="column is-one-quarter box" key={index}>
+          <div
+            className="column is-one-quarter box"
+            key={index}
+            onClick={(e) => showDetails(pokemon)}
+          >
             <img
               src={pokemon?.sprites?.other?.dream_world?.front_default}
               alt=""
@@ -39,7 +55,7 @@ const PokemonList = () => {
         ))}
       </div>
     ) : (
-      <h3>Loading...</h3>
+      <h3 className="title is-3">Loading...</h3>
     );
   };
 
