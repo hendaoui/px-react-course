@@ -50,7 +50,7 @@ const PokemonList = () => {
               alt=""
             />
             <div className="divider" />
-            <h5 className="title is-5">{pokemon?.name}</h5>
+            <h5 className="title is-5 pokemon-card_name">{pokemon?.name}</h5>
           </div>
         ))}
       </div>
