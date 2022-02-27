@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
-}
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 40px;
+  background-color: #efefef;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  max-width: 40vh;
+  width: 400px;
+  margin: auto;
+  display: block;
+  margin-bottom: 70px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-container {
+  width: 80%;
+  margin: auto;
+}
+.column {
+  margin: 0 12px;
+}
+.column:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.column .title {
+  text-transform: uppercase;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.box img {
+  width: 200px;
+  height: 200px;
+}
+.divider {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  width: 100%;
+}
+.divider::after,
+.divider::before {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+.pokemon-card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.pokemon-card_header {
+  position: relative;
+}
+.pokemon-card_id {
+  color: #e9e8e7;
+  font-size: 10em;
+  font-weight: 500;
+  margin: -40px;
+}
+.pokemon-card_header .pokemon-card_img {
+  left: 50%;
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.pokemon-card_info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.pokemon-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.pokemon-card_name {
+  font-family: "Press Start 2P", cursive;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemon-description {
+  text-align: left;
+}
+.pokemon-type.Grass {
+  background-color: #00d1b2 !important;
+  color: #fff;
+}
+.pokemon-type.Poison {
+  background-color: #a040a0 !important;
+  color: #fff;
+}
+.pokemon-type.Bug {
+  background-color: #9cb820 !important;
+  color: #fff;
+}
+.pokemon-type.Flying {
+  background-color: #9096f0 !important;
+  color: #fff;
+}
+.pokemon-type.Dragon {
+  background-color: #a040a0 !important;
+  color: #fff;
+}
+.pokemon-type.Psychic {
+  background-color: #7038f8 !important;
+  color: #fff;
+}
+.pokemon-type.Electric {
+  background-color: #c09643 !important;
+  color: #fff;
+}
+.pokemon-type.Ghost {
+  background-color: #705898 !important;
+  color: #fff;
+}
+.pokemon-type.Ground {
+  background-color: #e0b668 !important;
+  color: #fff;
+}
+.pokemon-type.Psychic {
+  background-color: #eb2d77 !important;
+  color: #fff;
+}
+.pokemon-type.Water {
+  background-color: #6890f0 !important;
+  color: #fff;
+}
+.pokemon-type.Ice {
+  background-color: #98d8d8 !important;
+  color: #fff;
+}
+.pokemon-type.Fire {
+  background-color: #f08030 !important;
+  color: #fff;
 }
